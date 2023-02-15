@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 const RandomPicture = () => {
   const [view, setView] = useState([]);
 
-  useEffect(async () => {
-    await fetch("https://randomuser.me/api/?results=1")
+  useEffect(() => {
+    fetch("https://randomuser.me/api/?results=1")
       .then((res) => res.json())
       .then((result) => {
         let person = {

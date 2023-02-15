@@ -1,13 +1,8 @@
 import React from "react";
 
 const Watch = () => {
-  const [second, setSecond] = React.useState(1);
+  const [second, setSecond] = React.useState(null);
 
-  React.useEffect(() => {
-    setInterval(() => {
-      setSecond(second + 1);
-    }, 2000);
-  }, [second]);
   return (
     <div className="watch">
       <div className="clock">
@@ -16,7 +11,7 @@ const Watch = () => {
         <li className="third">6</li>
         <li className="fourth">9</li>
         <div
-          style={{ transform: `rotate(${second}deg)`, transformOrigin: "0.0" }}
+          style={{ transform: `rotate(${second}deg)` }}
           className="line"
         ></div>
       </div>
@@ -25,3 +20,14 @@ const Watch = () => {
 };
 
 export default Watch;
+// import React from 'react'
+
+// const Watch = () => {
+//   return (
+//     <div>
+//       asd
+//     </div>
+//   )
+// }
+
+// export default Watch

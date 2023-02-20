@@ -1,8 +1,13 @@
 import React from "react";
 
 const Watch = () => {
-  const [second, setSecond] = React.useState(null);
+  const [second, setSecond] = React.useState([1]);
 
+  // React.useLayoutEffect(() => {
+  //   setInterval(() => {
+  //     setSecond([...prev, prev + 1]);
+  //   }, 1000);
+  // }, [second]);
   return (
     <div className="watch">
       <div className="clock">

@@ -8,14 +8,11 @@ const ShowHide = () => {
         <button onClick={() => setVisible(true)}>Show</button>
         <button onClick={() => setVisible(false)}>Hide</button>
       </div>
-      {visible ? (
-        <div className="info">
-          <p>An input field!</p>
-          <input type="text" />
-        </div>
-      ) : (
-        ""
-      )}
+
+      <div className={visible ? "info" : "info-visible"}>
+        <p>An input field!</p>
+        <input type="text" />
+      </div>
     </div>
   );
 };

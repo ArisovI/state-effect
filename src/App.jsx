@@ -1,12 +1,15 @@
 import React from "react";
+import Animation from "./components/Animation";
 import Calc from "./components/Calc";
 import Comments from "./components/Comments";
 import Math from "./components/Math";
+import Pizza from "./components/Pizza";
 import RandomPicture from "./components/RandomPicture";
 import Select from "./components/Select";
 import ShowDiolog from "./components/ShowDiolog";
 import ShowHide from "./components/ShowHide";
 import SpecialBtn from "./components/SpecialBtn";
+import Travel from "./components/Travel";
 import Watch from "./components/Watch";
 import YourName from "./components/YourName";
 import "./style.css";
@@ -87,6 +90,27 @@ const App = () => {
         >
           10
         </div>
+
+        <div
+          onClick={() => toggle(11)}
+          className={active === 11 ? "tab tab-active" : "tab"}
+        >
+          11
+        </div>
+
+        <div
+          onClick={() => toggle(12)}
+          className={active === 12 ? "tab tab-active" : "tab"}
+        >
+          12
+        </div>
+
+        <div
+          onClick={() => toggle(13)}
+          className={active === 13 ? "tab tab-active" : "tab"}
+        >
+          13
+        </div>
       </div>
       <div className="contents">
         <div className={active === 1 ? "content active-content" : "content"}>
@@ -126,6 +150,18 @@ const App = () => {
 
         <div className={active === 10 ? "content active-content" : "content"}>
           <YourName />
+        </div>
+
+        <div className={active === 11 ? "content active-content" : "content"}>
+          <Animation />
+        </div>
+
+        <div className={active === 12 ? "content active-content" : "content"}>
+          <Pizza />
+        </div>
+
+        <div className={active === 13 ? "content active-content" : "content"}>
+      <Travel />
         </div>
       </div>
     </div>

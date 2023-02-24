@@ -1,23 +1,31 @@
 import React from "react";
 
 const SpecialBtn = () => {
+  const [count, setCount] = React.useState(0);
   const [info, setInfo] = React.useState([
-    { text: "1 Далеко-далеко за словесными горами в стране." },
+    { text: "1 Далеко-далеко за словесными горами в стране.", id: 0 },
     {
       text: "2 Далеко-далеко за словесными горами в стране.",
+      id: 1,
     },
     {
       text: "3 Далеко-далеко за словесными горами в стране.",
+      id: 2,
     },
   ]);
 
   function btn() {
-    // setInfo(info.splice(1, 2));
-    setInfo([...info, {text: 'asdasdd'}])
-  }
-
-  function back(){
-    
+    const res = info.map((el, index) => {
+      if (el.id == count) {
+        return {
+          ...el,
+          text: "Anything",
+        };
+      }
+      return el;
+    });
+    setInfo(res);
+    setCount(count + 1);
   }
 
   return (
